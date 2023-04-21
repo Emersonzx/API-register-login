@@ -8,6 +8,8 @@ const app = express()
 
 app.use(express.json())
 
+
+
 const User = require('./models/Users')
 
 const dbUser = process.env.DB_USER
@@ -133,3 +135,4 @@ catch(error){
  res.status(500).json({msg: "Aconteceu um erro no servidor, tente novamente mais tarde!"})
 }
 })
+module.exports = app
