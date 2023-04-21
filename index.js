@@ -13,10 +13,10 @@ const User = require('./models/Users')
 const dbUser = process.env.DB_USER
 const dbPassword = process.env.DB_PASSWORD 
 
-
+const port = 3000;
 
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.cn1kdts.mongodb.net/?retryWrites=true&w=majority`).then(() => {
- app.listen(3000)
+ app.listen(port)
  console.log('Conectou ao banco!')
 })
 // Public route
